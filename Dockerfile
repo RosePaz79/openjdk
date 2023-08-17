@@ -1,6 +1,5 @@
-FROM darlon/st:base
+FROM openjdk:22-bullseye
 
-RUN git clone https://github.com/darlonv/aula-darlon.git
-WORKDIR /aula-darlon/st/
+RUN apt update && apt -y install git
 
-CMD ["streamlit", "run", "hello.py"]
+
